@@ -9,6 +9,7 @@ $(document).ready(function() {
 
     getDataImages(0);
 
+    //pagination
     $("body").on('click', '.pagination > li > a', function(e){
         e.preventDefault();
         var attr_index = parseInt($(this).attr('data-index'));
@@ -20,7 +21,7 @@ $(document).ready(function() {
         }
     });
 
-    function getDataImages(item_from) { console.log(item_from); console.log(paginate.offset  * paginate.page_limit);
+    function getDataImages(item_from) {
         //get gallery
         $.ajax({
             url: "https://api.dealermade.com/v3/dealerships/hare-chevrolet/vehicles/1FTFW1ET8DKF64586",
